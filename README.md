@@ -25,3 +25,6 @@ instruções específicas:
     c) Comente, em um parágrafo, os aspectos de segurança em aplicações HTTP e possíveisimplicações a partir do código desenvolvido nesta questão.
 
 3) O diagrama abaixo, explorado na aula do dia 18.04.2023, traz as funções ou métodos necessáriospara o estabelecimento de conexões via sockets utilizando como protocolo de transporte o TCP –tal como é o caso do protocolo de aplicação HTTP.Com base nisto, identifique o trecho de código desenvolvido nas questões anteriores que implementeou corresponda a cada uma dessas funções.
+<p align="center">
+    <img width="460" height="300" src = "Captura de pantalla 2023-05-14 182333 copy.png">
+    </p>
