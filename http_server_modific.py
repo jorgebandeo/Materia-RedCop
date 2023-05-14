@@ -6,11 +6,11 @@ class MyHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
     def do_GET(self):
         if self.path == '/':
             files = os.listdir('.')
-            file_list = ' '
+            file_list = '<ul>'
             for file in files:
-                file_list += f'\n{file}'
-            file_list += ' '
-            content = f"Arquivos no diretório raiz: {file_list}"
+                file_list += f'<li>{file}</li>'
+            file_list += '</ul>'
+            content = f"<html><body><h1>Arquivos no diretório raiz:</h1>{file_list}</body></html>"
             self.send_response(200)
             self.send_header('Content-type', 'text/html')
             self.end_headers()
