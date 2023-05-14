@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 import http.server
 import os
 
@@ -9,8 +6,11 @@ class MyHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
     def do_GET(self):
         if self.path == '/':
             files = os.listdir('.')
-            file_list = '<ul>' + ''.join([f'<li>{file}</li>' for file in files]) + '</ul>'
-            content = f"<html><body>{file_list}</body></html>"
+            file_list = ' '
+            for file in files:
+                file_list += f'\n{file}'
+            file_list += ' '
+            content = f"Arquivos no diretório raiz: {file_list}"
             self.send_response(200)
             self.send_header('Content-type', 'text/html')
             self.end_headers()
