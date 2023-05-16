@@ -1,4 +1,4 @@
-# Materia-RedCop
+# Trabalho de Web Server M2.1
 instruções específicas:
 1) Implemente um serviço HTTP (servidor e cliente) através da biblioteca http.server para python,conforme exemplo dado na aula do dia 02.05.2023 (disponível no material da disciplina).
 
