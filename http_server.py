@@ -1,27 +1,16 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import http.server
-import os
+from http.server import BaseHTTPRequestHandler, HTTPServer
 
-class MyHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
-    
+class RequestHandler(BaseHTTPRequestHandler):
     def do_GET(self):
-        if self.path == '/':
-            files = os.listdir('.')
-            file_list = '<ul>' + ''.join([f'<li>{file}</li>' for file in files]) + '</ul>'
-            content = f"<html><body>{file_list}</body></html>"
-            self.send_response(200)
-            self.send_header('Content-type', 'text/html')
-            self.end_headers()
-            self.wfile.write(content.encode())
-        else:
-            self.send_error(404)
-            
-def run_server():
-    server_address = ('', 8000)
-    httpd = http.server.HTTPServer(server_address, MyHTTPRequestHandler)
-    httpd.serve_forever()
+        self.send_response(200)
+        self.send_header('Content-type', 'text/html')
+        self.end_headers()
+        self.wfile.write(b'Hello, world!')
 
-if __name__ == '__main__':
-    run_server()
+port = 8000
+httpd = HTTPServer(('', port), RequestHandler)
+print(f'Servidor rodando na porta {port}')
+httpd.serve_forever()
