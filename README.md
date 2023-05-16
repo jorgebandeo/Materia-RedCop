@@ -22,8 +22,9 @@ instruções específicas:
     1) Importações:
 
     - No segundo código, a importação http.server é usada em vez de from http.server import BaseHTTPRequestHandler, HTTPServer. Isso permite que a classe BaseHTTPRequestHandler seja referenciada diretamente como http.server.BaseHTTPRequestHandler no segundo código.
-    '''import http.server
-       import os'''
+    
+            '''import http.server
+            import os'''
    
     
     2) Classe MyHTTPRequestHandler:
