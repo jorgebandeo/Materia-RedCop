@@ -79,3 +79,64 @@ instruções específicas:
 <p align="center">
     <img width="460" height="300" src = "Captura de pantalla 2023-05-14 182333 copy.png">
     </p>
+1) Funções/métodos do lado do servidor:
+
+        server_side_socket(): Cria um socket do lado do servidor para aceitar conexões.
+        Correspondente: http.server.HTTPServer(server_address, MyHTTPRequestHandler)
+        
+        server_side_bind(): Associa o socket do lado do servidor a um endereço e porta específicos.
+        Correspondente: server_address = ('', 8000)
+        
+        server_side_listen(): Coloca o socket do lado do servidor no modo de escuta, aguardando por conexões entrantes.
+        Correspondente: httpd.serve_forever()
+
+        server_side_accept(): Aceita uma conexão entrante do lado do cliente e retorna um novo socket para comunicação.
+      Não há um trecho de código correspondente explicitamente nesse contexto, um exeplo seria:
+      
+        def server_side_accept(server_socket):
+            client_socket, client_address = server_socket.accept()
+            return client_socket, client_address
+        
+
+        server_side_recv(): Recebe dados do socket do lado do cliente.
+        Correspondente: self.wfile.write(content.encode())
+
+        server_side_send(): Envia dados para o socket do lado do cliente.
+      Não há um trecho de código correspondente explicitamente nesse contexto, um exeplo seria:
+      
+        def server_side_send(client_socket, data):
+            client_socket.send(data)
+      
+
+        server_side_close(): Fecha o socket do lado do servidor.
+      Não há um trecho de código correspondente explicitamente nesse contexto, um exeplo seria:
+      
+        def server_side_close(server_socket):
+            server_socket.close()
+
+        Funções/métodos do lado do cliente:
+
+        client_side_socket(): Cria um socket do lado do cliente para estabelecer conexão com o servidor.
+      Não há um trecho de código correspondente explicitamente nesse contexto, um exeplo seria:
+      
+           def client_side_socket():
+               client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+               return client_socket
+
+        client_side_connect(): Estabelece uma conexão com o servidor através do socket do lado do cliente.
+        Correspondente: requests.get(url) e conn.request("GET", "/")
+
+        client_side_send(): Envia dados para o socket do lado do servidor.
+      Não há um trecho de código correspondente explicitamente nesse contexto, um exeplo seria:
+      
+        def client_side_send(client_socket, data):
+            client_socket.send(data)
+
+        client_side_recv(): Recebe dados do socket do lado do servidor.
+        Correspondente: print(response.text)
+
+        client_side_close(): Fecha o socket do lado do cliente.
+      Não há um trecho de código correspondente explicitamente nesse contexto, um exeplo seria:
+      
+        def client_side_close(client_socket):
+            client_socket.close()
