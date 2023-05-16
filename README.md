@@ -19,53 +19,22 @@ instruções específicas:
 2) Adapte o mesmo código de modo que agora a resposta para o método HTTP GET direcione a umasaída HTML listando os arquivos que estão no diretório raíz do servidor (“/”). Como sugestão, vocêpode utilizar a biblioteca os do python para construir a lista e gerar a saída no formato HTML.
 
     a) Demonstre a construção do código para este exercício.
-    '''# Importações:
-# No segundo código, a importação http.server é usada em vez de from http.server import BaseHTTPRequestHandler, HTTPServer.
-# Isso permite que a classe BaseHTTPRequestHandler seja referenciada diretamente como http.server.BaseHTTPRequestHandler no segundo código.
-import http.server
-import os
+    1) Importações:
 
-# Classe MyHTTPRequestHandler:
-# A classe RequestHandler foi renomeada para MyHTTPRequestHandler no segundo código.
-# A herança de classe foi modificada de BaseHTTPRequestHandler para http.server.BaseHTTPRequestHandler.
-class MyHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
+    - No segundo código, a importação http.server é usada em vez de from http.server import BaseHTTPRequestHandler, HTTPServer. Isso permite que a classe BaseHTTPRequestHandler seja referenciada diretamente como http.server.BaseHTTPRequestHandler no segundo código.
+    2) Classe MyHTTPRequestHandler:
 
-    # Método do_GET():
-    # No primeiro código, o método do_GET() envia uma resposta simples 'Hello, world!' para qualquer solicitação GET.
-    # No segundo código, o método do_GET() foi modificado para fornecer uma listagem de arquivos no diretório raiz do servidor quando a solicitação GET é feita para a rota '/'.
-    # No segundo código, a lógica dentro do método do_GET() verifica se o caminho da solicitação é '/' usando if self.path == '/'.
-    # Se for '/', ele lista os arquivos no diretório raiz do servidor. Caso contrário, ele envia uma resposta de erro 404.
-    def do_GET(self):
-        if self.path == '/':
-            files = os.listdir('.')
-            file_list = '<ul>'
-            for file in files:
-                file_list += f'<li>{file}</li>'
-            file_list += '</ul>'
-            content = f"<html><body><h1>Arquivos no diretório raiz:</h1>{file_list}</body></html>"
-            self.send_response(200)
-            self.send_header('Content-type', 'text/html')
-            self.end_headers()
-            self.wfile.write(content.encode())
-        else:
-            self.send_error(404)
+    - A classe RequestHandler foi renomeada para MyHTTPRequestHandler no segundo código.
+    - A herança de classe foi modificada de BaseHTTPRequestHandler para http.server.BaseHTTPRequestHandler.
+    3) Método do_GET():
 
-# Método run_server():
-# O método run_server() é adicionado no segundo código para iniciar o servidor HTTP.
-# Ele cria uma instância de http.server.HTTPServer com o endereço do servidor ('', 8000) e a classe MyHTTPRequestHandler.
-# O método serve_forever() é chamado na instância do servidor HTTP para iniciar o loop de servidor e atender às solicitações indefinidamente.
-def run_server():
-    server_address = ('', 8000)
-    httpd = http.server.HTTPServer(server_address, MyHTTPRequestHandler)
-    httpd.serve_forever()
+    - No primeiro código, o método do_GET() envia uma resposta simples 'Hello, world!' para qualquer solicitação GET. No segundo código, o método do_GET() foi modificado para fornecer uma listagem de arquivos no diretório raiz do servidor quando a solicitação GET é feita para a rota '/'.
+    - No segundo código, a lógica dentro do método do_GET() verifica se o caminho da solicitação é '/' usando if self.path == '/':. Se for '/', ele lista os arquivos no diretório raiz do servidor. Caso contrário, ele envia uma resposta de erro 404.
+    4) Método run_server():
 
-if __name__ == '__main__':
-    run_server()
-
-# Essas são as principais diferenças entre os dois códigos.
-# No segundo código, foi adicionada a funcionalidade'''
-    
-    
+    - O método run_server() é adicionado no segundo código para iniciar o servidor HTTP. Ele cria uma instância de http.server.HTTPServer com o endereço do servidor ('', 8000) e a classe MyHTTPRequestHandler.
+    - O método serve_forever() é chamado na instância do servidor HTTP para iniciar o loop de servidor e atender às solicitações indefinidamente.
+    Essas são as principais diferenças entre os dois códigos. No segundo código, foi adicionada a funcionalidade de listar os arquivos no diretório raiz quando uma solicitação GET é feita para a rota '/'.
     
     b) Demonstre a saída, tanto a partir do browser quanto a partir de um client HTTP escrito porvocê.
 <p align="center">
