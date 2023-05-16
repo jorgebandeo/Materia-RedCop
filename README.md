@@ -21,7 +21,9 @@ instruções específicas:
     a) Demonstre a construção do código para este exercício.
 
     b) Demonstre a saída, tanto a partir do browser quanto a partir de um client HTTP escrito porvocê.
-
+<p align="center">
+    <img width="460" height="300" src = "ezgif.com-video-to2-gif.gif">
+    </p>
     c) Comente, em um parágrafo, os aspectos de segurança em aplicações HTTP e possíveisimplicações a partir do código desenvolvido nesta questão.
     
       - O HTTP é um protocolo que envia informações em texto simples, o que significa que qualquer pessoa que interceptar o tráfego de rede pode ver as     informações sendo transmitidas. Além disso, o HTTP não possui nenhum mecanismo de autenticação ou criptografia, o que torna fácil para hackers     interceptar e manipular os dados enviados através do protocolo. Para tornar as aplicações HTTP mais seguras, é importante usar técnicas como       criptografia, autenticação, validação de entrada de usuário e proteção contra ataques de injeção de código. No caso específico deste código, uma   possível implicação de segurança é que qualquer pessoa que tenha acesso à rede local pode fazer uma solicitação HTTP para o servidor e ver a lista de arquivos no diretório raiz. Se houver arquivos sensíveis nesse diretório, eles podem ser expostos a pessoas não autorizadas.
