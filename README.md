@@ -6,7 +6,7 @@ instruções específicas:
 
     - Execute novamente o código exemplificado (servidor e cliente), no número de vezes que achar adequado.
 <p align="center">
-    <img width="460" height="300" src = "ezgif.com-video-to-gif.gif">
+    <img width="1280" height="720" src = "ezgif.com-video-to-gif.gif">
     </p>
     
    - Finalize a coleta de pacotes do WireShark.A partir disso, forneça os detalhes do socket criado nesta comunicação na forma de uma tupla:
@@ -22,7 +22,7 @@ instruções específicas:
 
     b) Demonstre a saída, tanto a partir do browser quanto a partir de um client HTTP escrito porvocê.
 <p align="center">
-    <img width="460" height="300" src = "ezgif.com-video-to2-gif.gif">
+    <img width="1280" height="720" src = "ezgif.com-video-to2-gif.gif">
     </p>
     c) Comente, em um parágrafo, os aspectos de segurança em aplicações HTTP e possíveisimplicações a partir do código desenvolvido nesta questão.
     
