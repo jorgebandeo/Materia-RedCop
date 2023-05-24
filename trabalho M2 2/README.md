@@ -107,27 +107,27 @@ fragmentação IP, e a probabilidade do datagrama UDP ser perdido ou descartado
         0010  61 20 63 6f 6d 20 73 75 63 65 73 73 6f 21         a com sucesso!
             Data: 4d656e736167656d20726563656269646120636f6d207375636573736f21
             [Length: 30]
-    Realizando a leitura e comprenção ralizamos a transcrição dos dados acima 
+    - Realizando a leitura e comprenção ralizamos a transcrição dos dados acima 
     
         - Pacote 1:
 
-            Endereço IP de origem: 127.0.0.1
-            Endereço IP de destino: 127.0.0.1
-            Protocolo: User Datagram Protocol (UDP)
-            Porta de origem: 57192
-            Porta de destino: 1234
-            Dados: 6a6f7267652062616e64656f (hexadecimal) ou "jorge bandeo" (em ASCII)
-            Comprimento dos dados: 12 bytes
+                Endereço IP de origem: 127.0.0.1
+                Endereço IP de destino: 127.0.0.1
+                Protocolo: User Datagram Protocol (UDP)
+                Porta de origem: 57192
+                Porta de destino: 1234
+                Dados: 6a6f7267652062616e64656f (hexadecimal) ou "jorge bandeo" (em ASCII)
+                Comprimento dos dados: 12 bytes
             
         - Pacote 2:
 
-            Endereço IP de origem: 127.0.0.1
-            Endereço IP de destino: 127.0.0.1
-            Protocolo: User Datagram Protocol (UDP)
-            Porta de origem: 1234
-            Porta de destino: 57192
-            Dados: 4d656e736167656d20726563656269646120636f6d207375636573736f21 (hexadecimal) ou "Mensagem recebida com sucesso!" (em ASCII)
-            Comprimento dos dados: 30 bytes
+                Endereço IP de origem: 127.0.0.1
+                Endereço IP de destino: 127.0.0.1
+                Protocolo: User Datagram Protocol (UDP)
+                Porta de origem: 1234
+                Porta de destino: 57192
+                Dados: 4d656e736167656d20726563656269646120636f6d207375636573736f21 (hexadecimal) ou "Mensagem recebida com sucesso!" (em ASCII)
+                Comprimento dos dados: 30 bytes
 
     
 ## Questão 2
