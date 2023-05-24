@@ -75,7 +75,7 @@ fragmentação IP, e a probabilidade do datagrama UDP ser perdido ou descartado
     </p>
     - diagrama da comunicação com os blocos de açoes de cada elemento
     <p align="center">
-    <img width="854" height="480" src = "Diagrama sin título.drawio.png">
+    <img  src = "Diagrama sin título.drawio.png">
     </p>
     
     
