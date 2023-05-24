@@ -73,62 +73,12 @@ fragmentação IP, e a probabilidade do datagrama UDP ser perdido ou descartado
      <p align="center">
     <img width="854" height="480" src = "A.gif">
     </p>
+    - diagrama da comunicação com os blocos de açoes de cada elemento
+    <p align="center">
+    <img width="854" height="480" src = "A.gif">
+    </p>
     
-    <html>
-<head>
-  <title>Diagrama de Sequência</title>
-</head>
-<body>
-  <div class="diagram">
-    <div class="participant">Servidor</div>
-    <div class="participant">Cliente</div>
-    <div class="message">Inicia o socket do servidor</div>
-    <div class="arrow">&rarr;</div>
-    <div class="message">Aguarda conexões</div>
-    <div class="arrow">&larr;</div>
-    <div class="message">Recebe mensagem do cliente</div>
-    <div class="arrow">&larr;</div>
-    <div class="message">Envia resposta para o cliente</div>
-    <div class="arrow">&rarr;</div>
-    <div class="message">Envia mensagem para o servidor</div>
-    <div class="arrow">&rarr;</div>
-    <div class="message">Recebe resposta do servidor</div>
-    <div class="arrow">&larr;</div>
-    <div class="message">Exibe resposta recebida</div>
-    <div class="message">Envia mensagem para o servidor</div>
-    <div class="arrow">&rarr;</div>
-    <div class="message">Recebe resposta do servidor</div>
-    <div class="arrow">&larr;</div>
-    <div class="message">Exibe resposta recebida</div>
-    <div class="message">Envia mensagem para o servidor</div>
-    <div class="arrow">&rarr;</div>
-    <div class="message">Recebe resposta do servidor</div>
-    <div class="arrow">&larr;</div>
-    <div class="message">Exibe resposta recebida</div>
-    <div class="message">Encerra a comunicação</div>
-    <div class="arrow">&rarr;</div>
-  </div>
-  <style>
-    .diagram {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 50px;
-    }
-    .participant {
-      margin-bottom: 20px;
-    }
-    .message {
-      display: flex;
-      align-items: center;
-      margin-bottom: 10px;
-    }
-    .arrow {
-      font-size: 20px;
-    }
-  </style>
-</body>
-</html>
+    
 ## Questão 2
 O cálculo do checksum em pacotes UDP é feito somando-se todos os dados do pacote, incluindo o cabeçalho UDP, e adicionando um campo de checksum no cabeçalho. O checksum é calculado através de um algoritmo de soma de verificação. O destinatário do pacote realiza o mesmo cálculo e verifica se o checksum recebido é igual ao calculado. Se forem diferentes, o pacote é considerado corrompido.
 ## Questão 3
