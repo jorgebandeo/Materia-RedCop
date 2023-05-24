@@ -22,7 +22,8 @@ fragmentação IP, e a probabilidade do datagrama UDP ser perdido ou descartado
 ## Desenbolvimento
 # Questão 1
 - Código do reseptor
-                        import socket
+                        
+        import socket
 
         # Endereço IP e porta do servidor
         server_ip = 'localhost'
