@@ -19,8 +19,8 @@ overhead?
 4) Explique qual a relação existente entre o tamanho de um datagrama UDP, o processo de 
 fragmentação IP, e a probabilidade do datagrama UDP ser perdido ou descartado
 
-## Desenbolvimento
-# Questão 1
+# Desenbolvimento
+## Questão 1
 - Código do reseptor
                         
         import socket
