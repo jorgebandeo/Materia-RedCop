@@ -1,0 +1,20 @@
+# Trabalho de Web Server M2.2
+instruções específicas:
+1) Implemente o código de um transmissor e de um receptor do protocolo UDP. Em python, poderá ser utilizada a biblioteca “socket”, com as instruções disponíveis em https://wiki.python.org/moin/UdpCommunication.
+
+    - Inicie a coleta e análise dos pacotes através do WireShark, para o segmento de rede local.
+    - Execute o código desenvolvido (transmissor e receptor), no número de vezes que achar adequado.
+    - Finalize a coleta de pacotes do WireShark.
+    a) Forneça evidências da implementação do código e do seu funcionamento.
+    b) Forneça o diagrama de sequências de toda a comunicação.
+    c) Escolha um dos pacotes recebidos (isto é, do receptor), e transcreva o seu datagrama.
+    
+  
+2) Como se dá o cálculo do checksum em pacotes UDP? Exemplifique.
+3) O protocolo IP (camada de rede) fornece comunicação fim-a-fim, mas os pacotes podem ser 
+perdidos, duplicados e desordenados. O UDP, que utiliza os serviços do protocolo IP, também 
+fornece um serviço com as mesmas características. Sendo assim, qual a vantagem de um 
+desenvolvedor utilizar o protocolo UDP e não o protocolo IP diretamente, já que teria menos 
+overhead?
+4) Explique qual a relação existente entre o tamanho de um datagrama UDP, o processo de 
+fragmentação IP, e a probabilidade do datagrama UDP ser perdido ou descartado
