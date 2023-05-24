@@ -74,40 +74,40 @@ fragmentação IP, e a probabilidade do datagrama UDP ser perdido ou descartado
      <p align="center">
     <img width="854" height="480" src = "A.gif">
     </p>
-    b) diagrama da comunicação com os blocos de açoes de cada elemento
+    b) diagrama da comunicação com os blocos de ações de cada elemento
     <p align="center">
     <img  src = "Diagrama sin título.drawio.png">
     </p>
     c)
-    Ao realizarmos o salvamento dos dados da captura de pacotes optivemos esta mesnagem de texto no formato txt 
+    - Ao realizar o salvamento dos dados da captura de pacotes, obtivemos a seguinte mensagem de texto no formato .txt:
     
-        No.     Time           Source                Destination           Protocol Length Info
-             88 88.481668      127.0.0.1             127.0.0.1             UDP      44     57192 → 1234 Len=12
+            No.     Time           Source                Destination           Protocol Length Info
+                 88 88.481668      127.0.0.1             127.0.0.1             UDP      44     57192 → 1234 Len=12
 
-        Frame 88: 44 bytes on wire (352 bits), 44 bytes captured (352 bits) on interface \Device\NPF_Loopback, id 0
-        Null/Loopback
-        Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
-        User Datagram Protocol, Src Port: 57192, Dst Port: 1234
-        Data (12 bytes)
+            Frame 88: 44 bytes on wire (352 bits), 44 bytes captured (352 bits) on interface \Device\NPF_Loopback, id 0
+            Null/Loopback
+            Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+            User Datagram Protocol, Src Port: 57192, Dst Port: 1234
+            Data (12 bytes)
 
-        0000  6a 6f 72 67 65 20 62 61 6e 64 65 6f               jorge bandeo
-            Data: 6a6f7267652062616e64656f
-            [Length: 12]
+            0000  6a 6f 72 67 65 20 62 61 6e 64 65 6f               jorge bandeo
+                Data: 6a6f7267652062616e64656f
+                [Length: 12]
 
-        No.     Time           Source                Destination           Protocol Length Info
-             89 88.481943      127.0.0.1             127.0.0.1             UDP      62     1234 → 57192 Len=30
+            No.     Time           Source                Destination           Protocol Length Info
+                 89 88.481943      127.0.0.1             127.0.0.1             UDP      62     1234 → 57192 Len=30
 
-        Frame 89: 62 bytes on wire (496 bits), 62 bytes captured (496 bits) on interface \Device\NPF_Loopback, id 0
-        Null/Loopback
-        Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
-        User Datagram Protocol, Src Port: 1234, Dst Port: 57192
-        Data (30 bytes)
+            Frame 89: 62 bytes on wire (496 bits), 62 bytes captured (496 bits) on interface \Device\NPF_Loopback, id 0
+            Null/Loopback
+            Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+            User Datagram Protocol, Src Port: 1234, Dst Port: 57192
+            Data (30 bytes)
 
-        0000  4d 65 6e 73 61 67 65 6d 20 72 65 63 65 62 69 64   Mensagem recebid
-        0010  61 20 63 6f 6d 20 73 75 63 65 73 73 6f 21         a com sucesso!
-            Data: 4d656e736167656d20726563656269646120636f6d207375636573736f21
-            [Length: 30]
-    - Realizando a leitura e comprenção ralizamos a transcrição dos dados acima 
+            0000  4d 65 6e 73 61 67 65 6d 20 72 65 63 65 62 69 64   Mensagem recebid
+            0010  61 20 63 6f 6d 20 73 75 63 65 73 73 6f 21         a com sucesso!
+                Data: 4d656e736167656d20726563656269646120636f6d207375636573736f21
+                [Length: 30]
+    - Após realizar a leitura e compreensão dos dados fornecidos, podemos transcrever as informações dos pacotes capturados da seguinte forma:
     
         - Pacote 1:
 
