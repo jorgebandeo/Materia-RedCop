@@ -18,3 +18,28 @@ desenvolvedor utilizar o protocolo UDP e não o protocolo IP diretamente, já qu
 overhead?
 4) Explique qual a relação existente entre o tamanho de um datagrama UDP, o processo de 
 fragmentação IP, e a probabilidade do datagrama UDP ser perdido ou descartado
+
+## Desenbolvimento
+# Questão 1
+- Código do reseptor
+                        import socket
+
+        # Endereço IP e porta do servidor
+        server_ip = 'localhost'
+        server_port = 1234
+
+        # Cria o socket do servidor
+        server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        server_socket.bind((server_ip, server_port))
+
+        print('Servidor aguardando conexões...')
+
+        # Recebe e exibe as mensagens recebidas do cliente
+        while True:
+            data, address = server_socket.recvfrom(1024)
+            print('Mensagem recebida do cliente:', data.decode())
+
+            # Envia uma resposta para o cliente
+            response = 'Mensagem recebida com sucesso!'
+            server_socket.sendto(response.encode(), address)
+            
