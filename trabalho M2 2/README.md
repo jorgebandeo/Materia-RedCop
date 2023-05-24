@@ -1,4 +1,4 @@
-# Trabalho de Web Server M2.2
+# Protocolo UDP – User Datagram Protocol M2.2
 instruções específicas:
 1) Implemente o código de um transmissor e de um receptor do protocolo UDP. Em python, poderá ser utilizada a biblioteca “socket”, com as instruções disponíveis em https://wiki.python.org/moin/UdpCommunication.
 
