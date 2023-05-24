@@ -78,7 +78,57 @@ fragmentação IP, e a probabilidade do datagrama UDP ser perdido ou descartado
     <p align="center">
     <img  src = "Diagrama sin título.drawio.png">
     </p>
+    c)
+    Ao realizarmos o salvamento dos dados da captura de pacotes optivemos esta mesnagem de texto no formato txt 
     
+        No.     Time           Source                Destination           Protocol Length Info
+             88 88.481668      127.0.0.1             127.0.0.1             UDP      44     57192 → 1234 Len=12
+
+        Frame 88: 44 bytes on wire (352 bits), 44 bytes captured (352 bits) on interface \Device\NPF_Loopback, id 0
+        Null/Loopback
+        Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+        User Datagram Protocol, Src Port: 57192, Dst Port: 1234
+        Data (12 bytes)
+
+        0000  6a 6f 72 67 65 20 62 61 6e 64 65 6f               jorge bandeo
+            Data: 6a6f7267652062616e64656f
+            [Length: 12]
+
+        No.     Time           Source                Destination           Protocol Length Info
+             89 88.481943      127.0.0.1             127.0.0.1             UDP      62     1234 → 57192 Len=30
+
+        Frame 89: 62 bytes on wire (496 bits), 62 bytes captured (496 bits) on interface \Device\NPF_Loopback, id 0
+        Null/Loopback
+        Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+        User Datagram Protocol, Src Port: 1234, Dst Port: 57192
+        Data (30 bytes)
+
+        0000  4d 65 6e 73 61 67 65 6d 20 72 65 63 65 62 69 64   Mensagem recebid
+        0010  61 20 63 6f 6d 20 73 75 63 65 73 73 6f 21         a com sucesso!
+            Data: 4d656e736167656d20726563656269646120636f6d207375636573736f21
+            [Length: 30]
+    Realizando a leitura e comprenção ralizamos a transcrição dos dados acima 
+    
+        - Pacote 1:
+
+            Endereço IP de origem: 127.0.0.1
+            Endereço IP de destino: 127.0.0.1
+            Protocolo: User Datagram Protocol (UDP)
+            Porta de origem: 57192
+            Porta de destino: 1234
+            Dados: 6a6f7267652062616e64656f (hexadecimal) ou "jorge bandeo" (em ASCII)
+            Comprimento dos dados: 12 bytes
+            
+        - Pacote 2:
+
+            Endereço IP de origem: 127.0.0.1
+            Endereço IP de destino: 127.0.0.1
+            Protocolo: User Datagram Protocol (UDP)
+            Porta de origem: 1234
+            Porta de destino: 57192
+            Dados: 4d656e736167656d20726563656269646120636f6d207375636573736f21 (hexadecimal) ou "Mensagem recebida com sucesso!" (em ASCII)
+            Comprimento dos dados: 30 bytes
+
     
 ## Questão 2
 O cálculo do checksum em pacotes UDP é feito somando-se todos os dados do pacote, incluindo o cabeçalho UDP, e adicionando um campo de checksum no cabeçalho. O checksum é calculado através de um algoritmo de soma de verificação. O destinatário do pacote realiza o mesmo cálculo e verifica se o checksum recebido é igual ao calculado. Se forem diferentes, o pacote é considerado corrompido.
