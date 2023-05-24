@@ -69,3 +69,5 @@ fragmentação IP, e a probabilidade do datagrama UDP ser perdido ou descartado
 
         # Fecha o socket do cliente
         client_socket.close()
+## Questão 2
+O cálculo do checksum em pacotes UDP é feito somando-se todos os dados do pacote, incluindo o cabeçalho UDP, e adicionando um campo de checksum no cabeçalho. O checksum é calculado através de um algoritmo de soma de verificação. O destinatário do pacote realiza o mesmo cálculo e verifica se o checksum recebido é igual ao calculado. Se forem diferentes, o pacote é considerado corrompido.
