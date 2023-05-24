@@ -5,6 +5,7 @@ instruções específicas:
     - Inicie a coleta e análise dos pacotes através do WireShark, para o segmento de rede local.
     - Execute o código desenvolvido (transmissor e receptor), no número de vezes que achar adequado.
     - Finalize a coleta de pacotes do WireShark.
+    
     a) Forneça evidências da implementação do código e do seu funcionamento.
     b) Forneça o diagrama de sequências de toda a comunicação.
     c) Escolha um dos pacotes recebidos (isto é, do receptor), e transcreva o seu datagrama.
@@ -69,11 +70,11 @@ fragmentação IP, e a probabilidade do datagrama UDP ser perdido ou descartado
 
         # Fecha o socket do cliente
         client_socket.close()
-     a) 
+    a) implementação e comprovação do código  
      <p align="center">
     <img width="854" height="480" src = "A.gif">
     </p>
-    - diagrama da comunicação com os blocos de açoes de cada elemento
+    b) diagrama da comunicação com os blocos de açoes de cada elemento
     <p align="center">
     <img  src = "Diagrama sin título.drawio.png">
     </p>
